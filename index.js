@@ -7,7 +7,8 @@
 
 
 let paySimple = [
-  {IdFecha:20230901, Linea:3020001, IdMaterial:10001862, NmMaterial:'FINOS DE MANGANES' }
+  {IdFecha:20230901, Linea:3020001, IdMaterial:"10001862", NmMaterial:'FINOS DE MANGANES' , stock:['0.0','0.0','0.0','0.0','1.0','1.0','1.0','2.0','3.0'] }, 
+  {IdFecha:20230901, Linea:3020001, IdMaterial:, NmMaterial:'FINOS DE MANGANES' , stock:['0.0','0.0','0.0','0.0','1.0','1.0','1.0','2.0','3.0'] },
 ]
 
 let arrPayload = [
