@@ -7,8 +7,10 @@
 
 
 let paySimple = [
-  {IdFecha:20230901, Linea:3020001, IdMaterial:"10001862", NmMaterial:'FINOS DE MANGANES' , stock:['0.0','0.0','0.0','0.0','1.0','1.0','1.0','2.0','3.0'] }, 
-  {IdFecha:20230901, Linea:3020001, IdMaterial:, NmMaterial:'FINOS DE MANGANES' , stock:['0.0','0.0','0.0','0.0','1.0','1.0','1.0','2.0','3.0'] },
+  {IdFecha:20230901, Linea:"3020001", IdMaterial:"10001862", NmMaterial:'FINOS DE MANGANES' , stock:['0.0','0.0','0.0','0.0','1.0','1.0','1.0','2.0','3.0'] }, 
+  {IdFecha:20230901, Linea:"3020001", IdMaterial:"35", NmMaterial:'FINOS METALICOS AF' , stock:['0.0','0.0','0.0','0.0','1.0','1.0','1.0','2.0','3.0'] },
+  {IdFecha:20230901, Linea:"3020001", IdMaterial:"672", NmMaterial:'FINOS DE PELOTA' , stock:['0.0','0.0','0.0','0.0','1.0','1.0','1.0','2.0','3.0'] },
+  {IdFecha:20230901, Linea:"3020001", IdMaterial:"1", NmMaterial:'CARVAO NAPP COKING' , stock:['0.0','0.0','0.0','0.0','1.0','1.0','1.0','2.0','3.0'] },
 ]
 
 let arrPayload = [
@@ -53,6 +55,81 @@ let arrPayload = [
  }
 ]
 
+let retJsonSimple = `
+{
+  "traking":[
+     {
+        "IdFecha":"20230901",
+        "Linea":"3020001",
+        "IdMaterial":"10001862",
+        "NmMaterial":"FINOS DE MANGANES",
+        "stock":[
+           "0.0",
+           "0.0",
+           "0.0",
+           "0.0",
+           "1.0",
+           "1.0",
+           "1.0",
+           "2.0",
+           "3.0"
+        ]
+     },
+     {
+        "IdFecha":20230901,
+        "Linea":"3020001",
+        "IdMaterial":"35",
+        "NmMaterial":"FINOS METALICOS AF",
+        "stock":[
+           "0.0",
+           "0.0",
+           "0.0",
+           "0.0",
+           "1.0",
+           "1.0",
+           "1.0",
+           "2.0",
+           "3.0"
+        ]
+     },
+     {
+        "IdFecha":20230901,
+        "Linea":"3020001",
+        "IdMaterial":"672",
+        "NmMaterial":"FINOS DE PELOTA",
+        "stock":[
+           "0.0",
+           "0.0",
+           "0.0",
+           "0.0",
+           "1.0",
+           "1.0",
+           "1.0",
+           "2.0",
+           "3.0"
+        ]
+     },
+     {
+        "IdFecha":20230901,
+        "Linea":"3020001",
+        "IdMaterial":"1",
+        "NmMaterial":"CARVAO NAPP COKING",
+        "stock":[
+           "0.0",
+           "0.0",
+           "0.0",
+           "0.0",
+           "1.0",
+           "1.0",
+           "1.0",
+           "2.0",
+           "3.0"
+        ]
+     }
+  ]
+}
+`
+
 let retjson = `{
   "traking":[
      {
@@ -83,9 +160,10 @@ let retjson = `{
 function calcular() {
   
   let obj = JSON.parse(retjson);
-
-  console.log(obj)
+  let obj2 = JSON.parse(retJsonSimple);
   
+  console.log(obj)
+  console.log(obj2)
 }
 
 calcular();
